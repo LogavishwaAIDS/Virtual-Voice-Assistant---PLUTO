@@ -5,8 +5,8 @@ from email.message import EmailMessage
 import smtplib
 from decouple import config
 
-EMAIL = "vishwaff07@gmail.com"
-PASSWORD = "3216"
+EMAIL = " "
+PASSWORD = " "
 
 def find_my_ip():
     ip_address = requests.get('https://api64.ipify.org?format=json').json()
@@ -48,7 +48,7 @@ def send_email(receiver_add, subject, message):
 def get_news():
     news_headline = []
     result = requests.get(f"https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey"
-                          f"=8c6fac141451451c83fbe18518549632").json()
+                          f"= ").json()
     articles = result["articles"]
     for article in articles:
         news_headline.append(article["title"])
@@ -56,7 +56,7 @@ def get_news():
 
 
 def weather_forecast(city):
-    res = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=b6982f1b17dbd54460af1a6d4c2d73f9"
+    res = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid= "
                        ).json()
     weather = res["weather"][0]["main"]
     temp = res["main"]["temp"]
