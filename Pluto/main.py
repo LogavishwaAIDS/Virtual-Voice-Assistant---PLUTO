@@ -199,7 +199,7 @@ if __name__ == '__main__':
 
 
             elif "calculate" in query:
-                app_id = "H9AAHU-9HXE93GG7Y"
+                app_id = " "
                 client = wolframalpha.Client(app_id)
                 ind = query.lower().split().index("calculate")
                 text = query.split()[ind + 1:]
@@ -213,7 +213,7 @@ if __name__ == '__main__':
 
 
             elif 'what is' in query or 'who is' in query or 'which is' in query:
-                app_id = "H9AAHU-9HXE93GG7Y"
+                app_id = " "
                 client = wolframalpha.Client(app_id)
                 try:
 
@@ -242,7 +242,7 @@ if __name__ == '__main__':
                 pyautogui.moveTo(806, 125, 1)
                 pyautogui.click(x=806, y=125, clicks=1, interval=0, button='left')
                 speak("Error by night")
-                pyautogui.typewrite("Error by night", 0.1)
+                pyautogui.typewrite("Vishwa", 0.1)
                 time.sleep(1)
                 speak("press enter")
                 pyautogui.press('enter')
